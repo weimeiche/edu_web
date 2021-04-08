@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			@keyframes rotate {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes shadow{
+				0{ box-shadow: 0 0 10px 10px #0000FF66;}
+				50%{box-shadow: 0 0 20px 20px #0000FFee;}
+				100%{ box-shadow: 0 0 10px 10px #0000FF66;}
+			}
+
+			.loader {
+				color: white;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				margin: 0;
+				background-color: #00000055;
+				position: fixed;
+			}
+
+			.loader .loading_box {
+				width: 250px;
+				height: 250px;
+				border-radius: 50px;
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				border: 1px solid white;
+				box-shadow: 0 0 20px 10px #0000FF66;
+				animation: shadow 1s infinite;
+			}
+
+			.loader p {
+				text-align: center;
+				margin: 35px;
+				font-size: 30px;
+			}
+
+			.loader .symbol div {
+				width: 80px;
+				height: 80px;
+				margin: 0 auto;
+				border-top: 5px solid #fff;
+				border-bottom: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+				border-radius: 50%;
+				animation: rotate 1s infinite;
+			}
+		</style>
+
+		<div style="background-color: red; width: 100px; height: 100px;">adsf</div>
+		<div class="loader">
+			<div class="loading_box">
+				<div class="symbol">
+					<p>Loading...</p>
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

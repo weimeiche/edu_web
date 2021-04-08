@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<style type="text/css">
+			@keyframes retate{
+				from{}
+				to{}
+			}
+			.translate {
+				width: 300px;
+				height: 300px;
+				background-color: blue;
+				position: absolute;
+				background-image: url("../img/emoji%20(1).png");
+				background-size: cover;
+				left: 50%;
+				border: 1px solid red;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				/* 走的自己的一半 */
+			}
+			.translate1 {
+				width: 300px;
+				height: 300px;
+				background-color: gray;
+				position: absolute;
+				background-image: url("../img/emoji%20(1).png");
+				background-size: cover;
+				left: 50%;
+				border: 1px solid red;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				/* 走的自己的一半 */
+			}
+			.translate:hover{ 
+				transform-origin: 50px 50px;
+				transform: rotate(45deg) 
+			}
+		</style>
+		<div class="translate1"></div>
+		<div class="translate"></div>
+
+		<style type="text/css">
+			.transform {
+				width: 100px;
+				height: 100px;
+				background: red;
+				color: white;
+				padding: 10px;
+				transition: all 5s ease-in-out;
+				/* -webkit-transition: all 5s ease-in-out; */
+				/* For Safari 3.1 to 6.0 */
+			}
+
+			.transform:hover {
+				/* width: 300px;
+				height: 300px;
+				background-color: yellow; */
+				transform: rotateY(180deg);
+			}
+		</style>
+		<div class="transform">
+			这是通过贝塞尔曲线来完成的
+		</div>
+	</body>
+</html>
