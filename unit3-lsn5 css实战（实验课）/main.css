@@ -1,0 +1,27 @@
+body{background-color: #eee;}
+.main-box{ width: 900px; margin: 0 auto; background-color: white; border-radius: 5px;}
+.divhead table{ width: 100%; font-size: 12px; color: black;}
+.divhead a{ color: black; font-size: 16px; margin: 0 5px; text-decoration: none;} 
+.divhead a:hover{ color: blue; }
+
+#divmenu{width: 100%; height: 50px; line-height: 50px; background-color: #333333; }
+#divmenu a{ color: white; font-size: 16px; padding:5px; text-decoration: none; cursor: pointer;}
+#divmenu a:hover{ color: blue; background-color: lightblue; border-radius: 10px; font-weight: 700;}
+#divmenu a:last-child{ background: none; font-weight: normal;}
+
+#divsearch { line-height: 50px; margin: 20px; float: right;}
+#divsearch td{ width: 100%;}
+#divsearch input{ width: 250px; height:30px; line-height: 50px; border: 1px solid lightgray; padding: 10px; border-radius: 10px; float: left;}
+#divsearch div{ width: 50px; height:50px; background-image: url("images/search.png"); background-color: none; margin: 0; padding: 0; cursor: pointer; float: left;}
+#divsearch div:hover{ background-image: url("images/search_hover.png");}
+
+#register{ width: 700px; margin: 10px auto; border: 1px solid #eee; line-height: 50px; box-shadow: 5px 5px 25px 3px #eee; border-radius: 20px;}
+#register h1{text-align: center;}
+#register input{ border: 1px solid #999; width:180px; border-radius: 10px; padding: 5px; line-height: 30px;}
+#register input:focus{ border: 1px solid red;}
+#register input[type=radio]{ width: auto; border: 1px solid red; }
+#register textarea{ width: 80%; height: 100px; border: 1px solid #999; border-radius: 10px; resize: none;}
+#register input[type=submit]{ padding: 0 50px; height: 50px; background-color: red; color: white; font-size: 20px; cursor: pointer; border: 1px solid red; border-radius: 25px;}
+#register input[type=submit]:hover{ background-color: #FF4040; }
+
+#divfoot{ width: 100%; background-color: #333333; margin-top: 50px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
