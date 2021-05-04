@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script></script>
+		<title></title>
+		<style type="text/css">
+			.btn{ height: 50px; padding: 0 15px; cursor: pointer; line-height: 50px; background-color: red; border-radius: 25px; margin: 10px; color: white; font-size: 18px; float: left;}
+			.btn:hover{background-color: #FF4040;}
+			hr, .clear{ clear: both; }
+		</style>
+	</head>
+	<body>
+		<div class="btn" onmouseover="" onmouseout="" onkeydown="" onload="" onclick="getsda()">查找HTML元素</div><div class="clear"></div>
+		<div id="decument_id" title="asdfasdfasdfasdfds" class="decument_clrass">1</div>
+		<p  class="decument_clrass"></p>
+		<script type="text/javascript">
+			/**
+			 通过 id 找到 HTML 元素
+			通过标签名找到 HTML 元素
+			通过类名找到 HTML 元素
+			 */
+			// var e = document.getElementById("decument_id");
+			// e.innerHTML = "通过 id 找到 HTML 元素111";
+			
+			// // NodeList
+			// var e = document.getElementsByTagName("div")[1];
+			// e.innerHTML = "通过标签名找到 HTML 元素1";
+			
+			// class
+			// NodeList
+			var v = document.getElementsByClassName("decument_clrass")[0];
+			v.title = "-================";
+			v.innerHTML = "<a href='forward.html'>通过类名找到 HTML 元素</a>";
+		</script>
+		
+		<hr />
+		
+		<img id="div_change_html" src="../unit4-lsn1%20JavaScript简介(一)/img/pic_bulboff.gif" width="50px" />
+		<div class="btn" id="btn1">改变 HTML</div><div class="clear"></div>
+		<script type="text/javascript">
+			/**
+			 *  改变 HTML 输出流 document.write();
+			 * 改变 HTML 内容 innerHTML
+			 * 改变 HTML 属性 document.getElementById(id).attribute=新属性值
+			 * 改变 HTML 样式 document.getElementById(id).style.property=新样式
+			 */
+			// var img = document.getElementById("div_change_html");
+			// img.src = "../unit4-lsn1%20JavaScript简介(一)/img/pic_bulbon.gif";
+			// img.title = "马上下课了";
+			// img.asdfasdf="";
+			
+			// function adsf()
+			// var btn1 = document.getElementById("btn1");
+			// btn1.style.background = "blue";
+			// btn1.style.color = "red";
+		</script>
+		
+		<hr />
+		<div>
+		<div class="btn" >函数定义</div>
+		<div class="clear"></div>
+		</div>
+		<script type="text/javascript">
+			// 普通函数
+			// function functionName(parameters) {
+			//   执行的代码
+			// }
+			
+			// 函数表达式
+			// var x = function (a, b) {return a * b};
+			// var a = x(2,3);
+			// console.log("a:=="+a);
+			
+			// Function() 构造函数
+			// var myFunction = new Function("a", "b", "return a * b");
+			// var a = myFunction(3,4);
+			// console.log("myFunction===a:=="+a);
+			
+			// 函数提升（Hoisting）
+			// var a = myFunction(5);
+			// console.log("myFunction:=="+a);
+			// function myFunction(y) {
+			//     return y * y;
+			// }
+			
+			// 自调用函数
+			// (function () {
+			//     var x = "Hello!!";      // 我将调用自己
+			// })();
+			// console.log("x==a=waimain="+a);
+			
+			// 函数可作为一个值使用
+			// function myFunction(a, b) {
+			//     return a * b;
+			// }
+			// var x = myFunction(4, 3) * 2;
+			// console.log("myFunction:=x="+x);
+			
+			
+			// 函数是对象
+			// arguments.length 属性返回函数调用过程接收到的参数个数：
+			// function myFunction(a, b) {
+			//     return arguments.length;
+			// }
+			// console.log("myFunction(a, b) =-=-="+myFunction(33, 55) );
+			
+			// 箭头函数
+			// ES5
+			// var x = function(x, y) {
+			//      return x * y;
+			// }
+			// var a = x(3,4);
+			// console.log("return x * y; =-=-="+a );
+			
+			// ES6
+			// const xx = (x, y) => {  return x * y; };
+			// xx(3,4);
+			// const x = () => x * y;
+			// const fun = (x, y) => x * y;
+			
+		</script>
+		<hr />
+		
+		<div class="btn" id="eventListener">HTML DOM EventListener</div><div class="clear"></div>
+		<button id="btn1" onclick="removeListener()">removeEventListener</button>
+		<script type="text/javascript">
+			// addEventListener() 方法
+			// element.addEventListener(event, function, useCapture); 
+			
+			// var e = document.getElementById("eventListener");
+			// e.addEventListener("mouseover" ,consoleLog);
+			// e.addEventListener("mouseover", consoleLog1);
+			
+			
+			// function consoleLog(){
+			// 	console.log("hello world");
+			// }
+			// function consoleLog1(){
+			// 	console.log("hello world11111");
+			// }
+			
+			
+			// 向同一个元素中添加多个事件句柄
+			// 向 Window 对象添加事件句柄
+			// removeEventListener() 方法
+			// element.removeEventListener(event, function);
+			// e.removeEventListener("mouseover", consoleLog)
+			// function removeListener(){
+			// 	e.removeEventListener('mouseover', consoleLog);				
+			// }
+			
+		</script>
+		<hr />
+		
+		<div class="btn" >Window 对象</div><div class="clear"></div>
+		<script type="text/javascript">
+			var w=window.innerWidth
+			|| documentElement.clientWidth
+			|| document.body.clientWidth;
+			var h=window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+			// // x=document.getElementById("demo");
+			// // x.innerHTML="浏览器window宽度: " + w + ", 高度: " + h + "。"
+			console.log("浏览器window宽度: " + w + ", 高度: " + h + "。");
+			// console(window.innerWidth);
+			// DOM
+			// window
+		 // window.document  BOM  
+		 // document DOM
+		</script>
+		<hr />
+		
+		<div class="btn" >Window Screen</div><div class="clear"></div>
+		<script type="text/javascript">
+			/**
+			 * screen.availWidth - 可用的屏幕宽度
+			 * screen.availHeight - 可用的屏幕高度
+			 */
+			// w = screen.availWidth;
+			// h = screen.availHeight;
+			// console.log("屏幕window宽度: " + w + ", 高度: " + h + "。");
+			
+		</script>
+		<hr>
+		
+		<div class="btn" >Location</div><div  class="clear"> </div>
+		<script type="text/javascript">
+			// location 对象在编写时可不使用 window 这个前缀:
+			// location.hostname 返回 web 主机的域名  127.0.0.1
+			// location.pathname 返回当前页面的路径和文件名 web/unit4-lsn3%20JavaScript%E7%AE%80%E4%BB%8B(%E4%B8%89)/index.html
+			// location.port 返回 web 主机的端口 （80 或 443）8848
+			// location.protocol 返回所使用的 web 协议（http: 或 https:）,  http
+			// location.href 属性返回当前页面的 URL。
+			// location.assign() 方法加载新的文档。
+			// location.replace(url)  通过加载 URL 指定的文档来替换当前文档
+			// location.href = "forward.html";
+			// window.reload()
+
+		</script>
+		<hr>
+		
+		<div class="btn">History</div><div class="clear"> </div>
+		<a href="forward.html">asdf</a>
+		<script type="text/javascript">
+			// history.back(1) - 与在浏览器点击后退按钮相同
+			// history.forward(1) ;// - 与在浏览器中点击向前按钮相同
+			// history.go(1) 这个
+				
+			// function forwar(){
+			// 	history.forward(1) ;
+			// }
+		</script>
+		<hr>
+		
+		
+		<div class="btn">弹窗</div><div class="clear"> </div>
+		<script type="text/javascript">
+			// 警告框alert、确认框confirm、提示框prompt。
+			// myFunction();
+			// var b=confirm(2);
+			// if(b){}
+			// myFunction();
+			// function myFunction(){
+			// 	var x;
+				// var person=window.prompt("请输入你的名字", "asdf");
+				// if (person!=null && person!=""){
+				// 	x="你好 " + person + "! 今天感觉如何?";
+				// 	console.log(x);
+				// }
+			// }
+		</script>
+		<hr>
+		
+		<button onclick="clearTime()">111</button>
+		<div class="btn" onclick="shopInterval()">计时事件</div><div class="clear"> </div>
+		<script type="text/javascript">
+			// setInterval() - 间隔指定的毫秒数不停地执行指定的代码。
+			// setTimeout() - 在指定的毫秒数后执行指定代码。
+			
+			var i = 0;
+			// var inteval = setInterval(function(){
+			// 	console.log(i+"");
+			// 	i++;
+			// },1000);
+			
+			// function shopInterval(){
+			// 	clearInterval(inteval);
+			// }
+			
+			// timeout();
+			// // var timeout =	setTimeout(function(){
+			// // 		console.log(i+"");
+			// // 	},1000);
+			// // 	clearTimeout(timeout);
+			// function timeout(){
+			// 	setTimeout(function(){
+			// 		console.log(i+"");
+			// 		i++;
+			// 		timeout();
+			// 	},1000);
+			// }
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.btn{ height: 50px; padding: 0 15px; cursor: pointer; line-height: 50px; background-color: red; border-radius: 25px; margin: 10px; color: white; font-size: 18px; float: left;}
+			.btn:hover{background-color: #FF4040;}
+			hr, .clear{ clear: both; }
+		</style>
+	</head>
+	<body>
+		<div class="btn" >if条件语句</div><div class="clear"></div>
+		<script type="text/javascript">
+			/**
+			 * if条件语句
+			 * if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码
+			// if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码
+			// if...else if....else 语句- 使用该语句来选择多个代码块之一来执行
+			 */
+			var x = 1, y = 10;
+			if(99){ // boolean false:0;  >0 true;
+				document.write("x小于1");
+			}else if(y < 99){
+				document.write("y小于99");
+			} else{
+				document.write("x不小于1");
+			}
+		</script>
+		
+		<hr />
+		
+		<div class="btn" >Swidth条件语句</div><div class="clear"></div>
+		<script type="text/javascript">
+			/**
+			/**
+			 * switch(n){			// 	case 1:			// 		执行代码块 1			// 		break;			// 	case 2:			// 		执行代码块 2			// 		break;			// 	default:			// 		与 case 1 和 case 2 不同时执行的代码			// 	 break;			// }
+			//  */
+			var x = "星期三";
+			switch(x){
+				case "星期一":
+				document.write("星期一放五一");
+				case "星期二":
+				document.write("星期二放暑假");
+				break;
+				default: break;
+			}
+			
+		</script>
+		
+		<hr />
+		
+		<div class="btn" >for循环语句</div><div class="clear"></div>
+		<script type="text/javascript">
+			// var i = 0;
+			// for ( ; ; ) {
+			// 	document.write(i+",");
+			// 	i++;
+			// }
+			
+			var arr = new Array();
+			arr[0] = 1;
+			arr['age'] = 2;
+			
+			// var arr1 = new Array(1,2);
+			// var arr2 = [1,23];
+			
+			for(var i in arr){
+				document.write(i+":"+arr[i]+",");
+			}
+		</script>
+		<hr />
+		
+		<div class="btn" >while循环语句</div><div class="clear"></div>
+		<script type="text/javascript">
+			var x = 5;
+			while(x < 10){
+				document.write(x+",");
+				x++;
+			}
+			// x = 10;
+			// for (var i = 5; i < 10; i++) {
+			// 	document.write(i+",");
+			// }
+			
+			do{
+				document.write(x+",");
+				x++;
+			}while(x < 10)
+		</script>
+		<hr />
+		
+		
+		<div class="btn" >break</div>
+		<div class="btn" >continue</div><div class="clear"></div>
+		<script type="text/javascript">
+			/**
+			 * break 语句可用于跳出循环。break 语句跳出循环后，会继续执行该循环之后的代码（如果有的话）				continue 语句中断循环中的迭代，如果出现了指定的条件，然后继续循环中的下一个迭代。
+			 */
+			for (var j = 0; j < 5; j++) {
+				while /do...while/swtich
+				for (var i = 0; i < 5; i++) {
+					document.write(i);
+					if(i>2)break;
+					document.write(",");
+				}
+				document.write("j:==="+j);
+			}
+		</script>
+		<hr />
+		
+		<div class="btn" >返回类型/构造函数</div>
+		<script type="text/javascript">
+			/**
+			 * 
+			 * 检测变量的数据类型  typeof
+
+typeof "John"                 // 返回 string typeof 3.14                   // 返回 numbertypeof NaN                    // 返回 numbertypeof false                  // 返回 booleantypeof [1,2,3,4]              // 返回 objecttypeof {name:'John', age:34}  // 返回 objecttypeof new Date()             // 返回 objecttypeof function () {}         // 返回 functiontypeof myCar                  // 返回 undefined (如果 myCar 没有声明)typeof null                   // 返回 object
+				返回变量的构造函数  constructor
+				
+"John".constructor     // 返回函数 String()  { [native code] }(3.14).constructor      // 返回函数 Number()  { [native code] }false.constructor       // 返回函数 Boolean() { [native code] }[1,2,3,4].constructor  // 返回函数 Array()   { [native code] }{name:'John', age:34}.constructor // 返回函数 Object()  { [native code] }new Date().constructor  // 返回函数 Date()    { [native code] }function () {}.constructorv// 返回函数 Function(){ [native code] }
+
+			 */
+			// Boolean a;
+			// boolean b; try
+			
+			// if(atue){
+				
+			// }
+		</script>
+		<hr>
+		
+		<div class="btn" >抛出异常</div> 
+		
+		<div  class="clear"> </div>
+		<input id="demo" />
+		<div id="p01" onclick="myFunction()">p01</div>
+		<script type="text/javascript">
+			/**
+			
+			 * 
+			 */		
+			 myFunction();
+			 function myFunction(){			  var message, x;			  message = document.getElementById("p01");			  message.innerHTML = "";			  x = document.getElementById("demo").value;
+			// 0/0;			  try { 				if(x == "") throw "值是空的";				if(isNaN(x)) throw "值不是一个数字";				x = Number(x);				if(x > 10) throw "太大";				if(x < 5) throw "太小";			  }			  catch(err) {				message.innerHTML = "错误: " + err + ".";			  }			  finally {				document.getElementById("demo").value = "";			  }			}
+		</script>
+		<hr>
+		
+		<div class="btn" >数据类型转换</div>
+		<div  class="clear"> </div>
+		<script type="text/javascript">
+			/**
+			 * 
+			 * 
+		转换为字符串String(100 + 23)  // 将数字表达式转换为字符串并返回(100 + 23).toString()转换为数字Number("3.14")    // 返回 3.14Number(false)     // 返回 0Number(new Date())   // 返回 1404568027739parseFloat()parseInt()“+/-”5 + null    // 返回 5   null 转换为 0"5" + null  // 返回"5null" "5" + 1     // 返回 "51" 1 转换为 "1"  "5" - 1     // 返回 4  "5" 转换为 5输出对象或变量时自动调用toString方法document.getElementById("demo").innerHTML = myVar;myVar = {name:"Fjohn"}  // toString 转换为 "[object Object]"myVar = [1,2,3,4]       // toString 转换为 "1,2,3,4"myVar = new Date()      // toString 转换为 "Fri Jul 18 2014 09:08:55 GMT+0200"
+			 */
+			
+			
+			
+			// document.write(Number(true)); // >0：true； 0：false
+			document.write("123"+5);
+			// var myVar = new Date();
+			// document.write(myVar.toString());
+			
+			// document.write(String(100 + 23)+1) ;  // 将数字表达式转换为字符串并返回
+			// document.write(4+(100 + 123).toString());
+			// document.write(Number(true)+"1");
+			// document.write(parseInt("12312w"));
+			
+			// if(true){  
+			// 	document.write("=========");
+			// }
+		</script>
+		<hr>
+		
+		
+		<div class="btn" onclick="getValue()">void(0) </div>
+		<script type="text/javascript">
+			/**
+			 * javascript:void(0) 中最关键的是 void 关键字
+			 * ， void 是 JavaScript 中非常重要的关键字
+			 * ，该操作符指定要计算一个表达式但是不返回值。语法：void func()   === void(func())javascript:void func()  === javascript:void(func())应用：<a href="javascript:void(alert('Warning!!!'))">点我!</a>function getValue(){   var a,b,c;   a = void ( b = 5, c = 7 );   document.write('a = ' + a + ' b = ' + b +' c = ' + c );}拓展：href="#"与href="javascript:void(0)"的区别
+			 */
+			
+			
+// function getValue(){
+//    var a,b,c;
+//    a = void ( b = 5, c = 7 ); //  b = 5, c = 7
+//    document.write('a = ' + a + ' b = ' + b +' c = ' + c );
+//    return b+c; // 12
+// }
+			
+			
+		</script>
+		<div class="clear"></div>
+		<a href="#p01">百度</a>
+		<a href="javascript:void(0)">百度</a>
+		
+		
+		<hr>
+		
+		<div class="btn" >this 关键字</div>
+		<script type="text/javascript">
+			/**
+			 * var person = {  firstName: "John",  lastName : "Doe",  id       : 5566,  fullName : function() {    return this.firstName ;  }};
+
+"use strict";var x = this;
+
+function myFunction() {  return this;}
+
+<div onclick="this.style.display='none'">点我后我就消失了</div >
+
+var person1 = {  fullName: function() {    return this.firstName+ " " + this.lastName;  }}var person2 = {  firstName:"John",  lastName: "Doe",}person1.fullName.call(person2);  // 返回 "John Doe"
+			 */
+			
+		</script>
+		
+		<div class="btn" >JSON</div>  <div class="clear"
+			
+		</div>
+		<script type="text/javascript">
+			/**
+			 * 
+			 * 数据为 键/值 对。数据由逗号分隔。大括号保存对象方括号保存数组
+			 * var text = '{ "sites" : [' +    '{ "name":"Google" , "url":"www.google.com" },' +    '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';    obj = JSON.parse(text);document.getElementById("demo").innerHTML = obj.sites[1].name + " " + obj.sites[1].url;
+
+JSON.parse()：用于将一个 JSON 字符串转换为 JavaScript 对象。JSON.stringify()：用于将 JavaScript 值转换为 JSON 字符串。
+			 */
+			
+			var stu = {
+				"class_no":4,
+				"classname":"4班"
+			}
+			var arr = new Array(1,2,3);
+			JSON.parse("arr")
+			document.write(JSON.stringify(arr));
+		</script>
+		<hr>
+		<div class="btn" >代码规范</div>
+		<script type="text/javascript">
+		</script>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</body>
+</html>

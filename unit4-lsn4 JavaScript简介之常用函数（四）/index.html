@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.btn{ height: 50px; padding: 0 15px; cursor: pointer; line-height: 50px; background-color: red; border-radius: 25px; margin: 10px; color: white; font-size: 18px; float: left;}
+			.btn:hover{background-color: #FF4040;}
+			hr, .clear{ clear: both; }
+		</style>
+	</head>
+	<body>
+
+		<div class="btn">对象</div><div class="clear"></div>
+		<script>
+			// 访问对象的属性  objectName.propertyName
+			var message="听说我有八个字符";		
+			// // // typeof
+			var x=message.length;
+			document.write(message+":"+x+"<br>");
+			
+			// 访问对象的方法  objectName.methodName()
+			var message="Hello World!";
+			var x=message.toLowerCase();
+			// // // message.toLowerCase()
+			// console.log(x);
+			
+			
+			// 创建 JavaScript 对象
+			// 使用 Object 定义并创建对象的实例。
+			// 等价于 o = new Boolean(true);
+			// var o = new Object(true);
+			// var person=new Object();
+			// person.firstname="liu";
+			// person.lastname="navy";
+			// person={firstname:"liu",lastname:"navy",age:3};
+			// 使用函数来定义对象，然后创建新的对象实例。
+			// function person(firstname,lastname,age){
+			//     this.firstname=firstname;
+			//     this.lastname=lastname;
+			//     this.age=age;
+			// }
+			
+			
+			// function person(firstname,lastname,age){
+			//     this.firstname=firstname;
+			//     this.lastname=lastname;
+			//     this.age=age;
+			
+			//     this.changeName=changeName;
+			//     function changeName(name){
+			//         this.lastname=name;
+			// 		document.write("====");
+			//     }
+			// }
+			// xdd=new person("习","大大", 5);
+			// console.log(xdd.firstname+xdd.lastname+",只有"+xdd.age+"岁");
+			// xdd.changeName("MM");
+			// console.log(xdd.firstname+xdd.lastname+",也只有"+xdd.age+"岁");
+		</script>
+		<hr />
+		
+		
+		<div class="btn">字符串对象</div><div class="clear"></div>
+		<script>
+			// 你使用位置（索引）可以访问字符串中任何的字符：
+			// var str = "《牡丹亭》";
+			// console.log(str[3]);
+			
+			// 字符串（String）使用长度属性length来计算字符串的长度：
+			var str = "《牡丹亭》游园惊梦"
+			// console.log(str.length);
+			
+			// 字符串使用 indexOf() 来定位字符串中某一个指定的字符首次出现的位置			// lastIndexOf() 方法在字符串末尾开始查找字符串出现的位置			// match()函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符			// replace() 方法在字符串中用某些字符替换另一些字符	
+			var str = "原来姹紫嫣红开遍，这般都付与断井颓垣，良辰美景奈何天，便赏心乐事谁家院。";
+			//  var index = str.lastIndexOf("姹紫嫣红");
+			// document.write(str.indexOf("姹紫嫣红1")+"<br>");
+			// // document.write(str.lastIndexOf("，")+"<br>");
+			// document.write(str.replace("姹紫嫣红","***")+"<br>");
+			// console.log(str.match("姹紫嫣红"));
+			
+			// if(index > -1){
+			// 	document.write("找到了对应的内容");
+			// }
+			
+
+			
+			// document.write(str);
+			// if(index > -1){
+			// 	document.write("查找到了相关内容");
+			// }
+			// document.write(index);
+			// var s = str.lastIndexOf("姹紫嫣红1");
+			// document.write(s);
+			
+			// var s = str.match("姹紫嫣红11");
+			// if(s.length > 0){
+			// }
+			
+			
+			// 字符串大小写转换用函数 toUpperCase()/toLowerCase()			// 字符串使用split()函数转为数组			// 反斜线（\）插入特殊符号
+			// console.log(str.split("，"));
+			
+			
+			// var str = "Hello, LiLei. My name is HaiMeimei";	
+			// charAt()：返回在指定位置的字符。			// concat()：连接两个或更多字符串，并返回新的字符串。			// search()：查找与正则表达式相匹配的值。
+			// test()			// substr()：从起始索引号提取字符串中指定数目的字符。			// substring()：提取字符串中两个指定的索引号之间的字符。			// trim()：去除字符串两边的空白
+			// document.write(str.charAt(7));
+				
+			// var str = "    他年得傍     蟾宫客,     ";
+			// // var str1 = "不在梅边在柳边.";
+			// // document.write(str.charAt(4)+"=====<br>");
+			// // document.write(str.concat(str1,str1,str1,str1,str1,str1)+"=====<br>");
+			
+			// // document.write("===="+str.substr(4,3)+"=====<br>");
+			// document.write("===="+str+"=====<br>");
+			// document.write("===="+str.trim()+"=====<br>");
+			// document.write("===="+str.substring(0,2)+"=====");
+			
+		</script>
+		<hr />
+		
+		
+		
+		<div class="btn">Date（日期） 对象</div><div class="clear"></div>
+		<div id="txt"></div>
+		<div id="demo2"></div>
+		<div id="demo3"></div>
+		<script>
+			// 创建日期
+			// new Date();			// new Date(value);			// new Date(dateString);			// new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]]]]]);			// setFullYear() 设置具体的日期
+			// "Y-m-d H:i:s"
+			var d = new Date()
+			// document.write(d+"-<br>");
+			// // d.setMinutes(d.getMinutes()+40);
+			// // document.write(d+"-<br>");
+			// var d1 = new Date("October 13, 1975 11:13:00")
+			// document.write(d1+"-<br>");
+			// // document.write(d1+"<br>");
+			// var d2 = new Date(2021,12,24)
+			// document.write(d2+"<br>");
+			
+			// d2.getFullYear();
+			// d2.setMonth(2);
+			// d2.setHours(12);
+			// d2.setMinutes(59);
+			// d2.setSeconds(59);
+			// d.getMilliseconds();
+			// document.write(d+"====<br>");
+			// document.write(d.getFullYear()+"====<br>");
+			// document.write(d.getMonth()+1+"====<br>");			
+			// document.write(d.getDay()+"====<br>");			
+			// document.write(d.getDate()+"==ooooo==<br>"); // 天数
+			// document.write(d.getHours()+"====<br>");
+			// document.write(d.getMinutes()+"====<br>");
+			// document.write(d.getSeconds()+"====<br>");
+			// document.write(d.getMilliseconds()+"====<br>");
+			
+			// d.setMinutes(d.getMinutes()+40);
+			// document.write(d+"====<br>");
+			
+			// var d3 = new Date(79,5,24,11,33,0);
+			// var d4 = new Date("2021-12-14");
+			
+			// 设置日期
+			// startTime();
+			// // getTime()
+			// var date = new Date();
+			// document.write(date);
+			// date.setYear(2030);
+			// document.write(date.getSeconds());
+			// date.setMonth(date.38()+28);
+			// date.getMinutes()46
+			// function startTime(){
+			// 	var today=new Date();
+			// 	var h=today.getHours();
+			// 	var m=today.getMinutes();
+			// 	var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+			// 	m=checkTime(m);
+			// 	s=checkTime(s);
+			// 	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+			// 	t=setTimeout(function(){startTime()},500);
+			// }
+			// function checkTime(i){
+			// 	if (i<10){
+			// 		i="0" + i;
+			// 	}
+			// 	return i;
+			// }
+			// Y-m-d H:i:s
+			
+			// 日期运算
+			// var now = new Date();
+			// var tomorrow = new Date();
+			// tomorrow.setDate(now.getDate()+1);
+			// if(now < tomorrow){
+			// 	document.write("明天的日期在今天之后");
+			// }
+		</script>
+		<hr />
+		
+		
+		<div class="btn">数组对象</div><div class="clear"></div>
+		<script>
+			// 更多实例
+			// 合并两个数组
+			// var children = arr.concat(arr1,arr2...);
+			
+			var kunqu = ["牡丹亭", "西厢记", "桃花扇", "长生殿"];
+			var wenmingxi = ["沙家浜", "智取威虎山", "杨乃武与小白菜"];
+			var jinju = ["贵妃醉酒", "空城计", "苏三起解"];
+			// document.write("ee123");
+			// console.log(kunqu.concat(jinju, wenmingxi, wenmingxi));
+			
+			
+			// 删除数组的最后一个元素 - pop()
+			// document.write(kunqu+"<br>");
+			// popArr();
+			// function popArr(){
+			// 	 kunqu.pop();
+			// 	document.write(kunqu+"<br>");
+			// }
+			
+			// // 数组的末尾添加新的元素 - push()	
+			// pushArr();
+			// function pushArr(){
+			// 	kunqu.push("拜月亭");
+			// 	document.write(kunqu+"<br>");
+			// }
+			
+			// // 将一个数组中的元素的顺序反转排序 - reverse()
+			// reverseArr();
+			// function reverseArr(){
+			// 	kunqu.reverse();
+			// 	document.write(kunqu+"<br>");
+			// }
+			
+			// // 删除数组的第一个元素 - shift()
+			// shiftArr();
+			// function shiftArr(){
+			// 	kunqu.shift();
+			// 	document.write("<br><br><br>"+kunqu);
+			// }
+			
+			// // 从一个数组中选择元素 - slice()
+			// sliceArr();
+			// function sliceArr(){
+			// 	var kq = kunqu.slice(1,2);
+			// 	console.log("<br>"+kq+"<br>");
+			// }
+			// console.log(kunqu);
+			
+			// 数组排序（按字母顺序升序）- sort()
+			// myFunction1();
+			// function myFunction1(){
+			// 	// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			// 	// var fruits = ["啊啊", "啛啛喳喳", "不不不", "反反复复"];
+			// 	var fruits = [55,2,65,45,895,126];
+			// 	fruits.sort();
+			// 	console.log(fruits);
+			// }
+			// // 	var fruits = [55,2,65,45,895,126];
+			// // 	fruits.sort(function(a,b){return a-b});
+			// // 	console.log(fruits);
+			// // }
+			
+			// function myFunction1(){
+			// 	var points = [40,100,1,5,25,10];
+			// 	// points.sort(function(a,b){return a-b});
+			// 	points.sort(function(a,b){return b-a});
+			// 	console.log(points);
+			// }
+			
+			// splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+			// arrayObject.splice(index,howmany,item1,.....,itemX)
+			// index必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+			// howmany必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+			// item1, ..., itemX	可选。向数组添加的新项目。
+			
+			
+			// // 	fruits.sort(function(a,b){return a-b});
+			// function sort(array, funCompare){
+			// 	// 外层循环，控制趟数
+			// 	for (var i = 0; i < array.length - 1; i++) {
+			// 		// 内层循环 控制比较的次数
+			// 		isSort = true;
+			// 		for (var j = 0; j < array.length - 1 - i; j++) {
+			// 			if( funCompare(array[j], array[j + 1]) > 0){
+			// 				isSort = false;
+			// 				var tmp = array[j];
+			// 				array[j] = array[j + 1];
+			// 				array[j + 1] = tmp;
+			// 			}
+			// 		}
+			// 		if(isSort)break;
+			// 	}
+			// }
+			// Array.prototype.sortt = function(array, funCompare){
+			// 	// 外层循环，控制趟数
+			// 	for (var i = 0; i < array.length - 1; i++) {
+			// 		// 内层循环 控制比较的次数
+			// 		isSort = true;
+			// 		for (var j = 0; j < array.length - 1 - i; j++) {
+			// 			if( funCompare(array[j], array[j + 1]) > 0){
+			// 				isSort = false;
+			// 				var tmp = array[j];
+			// 				array[j] = array[j + 1];
+			// 				array[j + 1] = tmp;
+			// 			}
+			// 		}
+			// 		if(isSort)break;
+			// 	}
+			// };
+			// var points = [40,100,1,5,25,10];
+			// points.sortt(points, function(a,b){return a-b;});
+			// console.log(points);
+		</script>
+		<hr />
+		
+		
+		
+		<div class="btn">Math（算数） 对象</div><div class="clear"></div>
+		<script>
+			// round()
+			// 如何使用 round()。			
+			// random()
+			// 如何使用 random() 来返回 0 到 1 之间的随机数。			
+			// max()
+			// 如何使用 max() 来返回两个给定的数中的较大的数。（在 ECMASCript v3 之前，该方法只有两个参数。）			
+			// min()
+			// 如何使用 min() 来返回两个给定的数中的较小的数。（在 ECMASCript v3 之前，该方法只有两个参数。）
+			
+			// 常量
+			// Math.E
+			// Math.PI = 3.1415926
+			// Math.SQRT2
+			// Math.SQRT1_2
+			// Math.LN2
+			// Math.LN10
+			// Math.LOG2E
+			// Math.LOG10E
+			// var a = 1.44;
+			// document.write(Math.PI+"<br>");
+			// document.write(Math.round(a)+"<br>");
+			// document.write(Math.round(a*10)/10+"<br>");
+			
+			
+			
+			// var x = 55551.4455;
+			// document.write(x+"<br>");
+			// document.write(Math.round(x*100)/100+"<br>");
+			
+			
+			// var x = Math.random();
+			// document.write(x+"<br>");
+			// document.write(Math.round(x*100)+"<br>");
+			// document.write(Math.round(x*50)+50+"<br>");
+			
+			// Math.cos
+			
+			// 1882,344，88888，
+			document.write(Math.min(1882,344)+"<br>")
+			document.write(Math.min(Math.min(1882,344),88888)+"<br>")
+			document.write(Math.min(1882,344,88888,888888,8878888)+"<br>")
+			
+			// Math.			
+			// document.write(Math.min(Math.min(12,122),489)+"<br>");
+			// document.write(Math.min(12,122,489,4189,48339)+"<br>");
+			// document.write(Math.round(a*10)/10+"<br>");
+			// document.write(Math.round(Math.random()*50)+50);
+			// document.write(Math.round(Math.random()*1000));
+			// var x=Math.LN10;
+			// document.write(x+"<br>");
+			// var y=Math.sqrt(16);
+			// document.write(y+"<br>");
+			// document.write(Math.round(4.7)+"<br>");
+
+			
+		</script>
+		<hr />
+		
+		
+
+		<div class="btn" >正则表达式</div><div class="clear"></div>
+		<input type="radio" id="asdfasdf" value="asdf" />
+		<label for="asdfasdf">男</label>
+		<textarea>sdfgsd</textarea>
+		<script>
+			// 语法:/正则表达式主体/修饰符(可选)
+			// search() 方法 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。
+			// replace() 方法 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
+			// test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。
+			// /[^]表达式asdf[$]/img[修饰符]
+			var str = "The BeSt things in life are free!";
+			var patt = /e/igm;
+			str.match()
+			// var reg = new RegExp(patt);
+			// console.log(reg.RegExp(str));
+			
+			// document.getElementsByTagName("body")[0];
+			// var str = "asdf
+			// ASDF
+			// ASdf";
+			// .value
+			// 修饰符
+			// i	执行对大小写不敏感的匹配。
+			// g	执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+			// m	执行多行匹配。
+			
+			// [abc]	查找方括号之间的任何字符。
+			// [a-z]	查找任何从 0 至 9 的数字。
+			// (xasdf|yadsfasd|asdfas)	查找任何以 | 分隔的选项。
+			
+			// \d	查找数字。
+			// \s	查找空白字符。
+			// \b	匹配单词边界。
+			// \uxxxx	查找以十六进制数 xxxx 规定的 Unicode 字符。
+			
+			// n+	匹配任何包含至少一个 n 的字符串。
+			// n*	匹配任何包含零个或多个 n 的字符串。
+			// n?	匹配任何包含零个或一个 n 的字符串。
+			// n{3,}
+			
+			// var str = "The best things in life are free!";
+			// var patt = /E/i;
+			// document.write(patt.RegExp()(str)+"<br>");
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

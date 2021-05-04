@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.btn{ height: 50px; padding: 0 15px; cursor: pointer; line-height: 50px; background-color: red; border-radius: 25px; margin: 10px; color: white; font-size: 18px; float: left;}
+			.btn:hover{background-color: #FF4040;}
+			hr, .clear{ clear: both; display: none;}
+		</style>
+	</head>
+	<body>
+		<div class="btn">查找HTML元素</div><div class="clear"></div>
+		<p id="decument_id" class="decument_class"></p>
+		<script type="text/javascript">
+			/**
+			 通过 id 找到 HTML 元素
+			通过标签名找到 HTML 元素
+			通过类名找到 HTML 元素
+			 */
+			
+		</script>
+		
+		<hr />
+		
+		<div class="btn" >改变 HTML</div><div class="clear"></div>
+		<div id="div_change_html"></div>
+		<script type="text/javascript">
+			/**
+			 *  改变 HTML 输出流 document.write();
+			 * 改变 HTML 内容 innerHTML
+			 * 改变 HTML 属性 document.getElementById(id).attribute=新属性值
+			 * 改变 HTML 样式 document.getElementById(id).style.property=新样式
+			 */
+			// var div_change_html = document.getElementById("div_change_html");
+			// div_change_html.style.background = "blue";
+		</script>
+		
+		<hr />
+		
+		<div class="btn" >函数定义</div><div class="clear"></div>
+		<script type="text/javascript">
+			// 普通函数
+			// function functionName(parameters) {
+			//   执行的代码
+			// }
+			
+			// 函数表达式
+			// var x = function (a, b) {return a * b};
+			
+			// Function() 构造函数
+			// var myFunction = new Function("a", "b", "return a * b");
+			
+			// 函数提升（Hoisting）
+			// myFunction(5);
+			// function myFunction(y) {
+			//     return y * y;
+			// }
+			
+			// 自调用函数
+			// (function () {
+			//     var x = "Hello!!";      // 我将调用自己
+			// })();
+			
+			
+			// 函数可作为一个值使用
+			// function myFunction(a, b) {
+			//     return a * b;
+			// }			
+			// var x = myFunction(4, 3) * 2;
+			
+			// 函数是对象
+			// arguments.length 属性返回函数调用过程接收到的参数个数：
+			// function myFunction(a, b) {
+			//     return arguments.length;
+			// }
+			
+			// 箭头函数
+			// // ES5
+			// var x = function(x, y) {
+			//      return x * y;
+			// }			 
+			// // ES6
+			// const x = (x, y) => { return x * y };
+			// const x = (x, y) => x * y;
+
+		</script>
+		<hr />
+		
+		<div class="btn" >HTML DOM EventListener</div><div class="clear"></div>
+		<script type="text/javascript">
+			// addEventListener() 方法
+			// element.addEventListener(event, function, useCapture);
+			// 向同一个元素中添加多个事件句柄
+			// 向 Window 对象添加事件句柄
+			// removeEventListener() 方法
+			// element.removeEventListener(event, function);
+		</script>
+		<hr />
+		
+		<div class="btn" >Window 对象</div><div class="clear"></div>
+		<script type="text/javascript">
+			// var w=window.innerWidth
+			// || document.documentElement.clientWidth
+			// || document.body.clientWidth;
+			// var h=window.innerHeight
+			// || document.documentElement.clientHeight
+			// || document.body.clientHeight;
+			// x=document.getElementById("demo");
+			// x.innerHTML="浏览器window宽度: " + w + ", 高度: " + h + "。"
+		</script>
+		<hr />
+		
+		<div class="btn" >Window Screen</div><div class="clear"></div>
+		<script type="text/javascript">
+			/**
+			 * screen.availWidth - 可用的屏幕宽度
+			 * screen.availHeight - 可用的屏幕高度
+			 */
+			console.log(screen.availHeight);
+		</script>
+		<hr>
+		
+		<div class="btn" >Location</div><div  class="clear"> </div>
+		<script type="text/javascript">
+			// window.location 对象在编写时可不使用 window 这个前缀:
+			// location.hostname 返回 web 主机的域名
+			// location.pathname 返回当前页面的路径和文件名
+			// location.port 返回 web 主机的端口 （80 或 443）
+			// location.protocol 返回所使用的 web 协议（http: 或 https:）,
+			// location.href 属性返回当前页面的 URL。
+			// location.assign() 方法加载新的文档。
+			// location.replace(url)  通过加载 URL 指定的文档来替换当前文档	
+
+		</script>
+		<hr>
+		
+		<div class="btn" >History</div><div class="clear"> </div>
+		<a href="forward.html"></a>
+		<script type="text/javascript">
+			// history.back() - 与在浏览器点击后退按钮相同
+			// history.forward() - 与在浏览器中点击向前按钮相同
+			// history.go() 这个
+		</script>
+		<hr>
+		
+		
+		<div class="btn">弹窗</div><div class="clear"> </div>
+		<script type="text/javascript">
+			// 警告框alert、确认框confirm、提示框prompt。
+			// myFunction();
+			function myFunction(){
+				var x;
+				var person=prompt("请输入你的名字");
+				if (person!=null && person!=""){
+					x="你好 " + person + "! 今天感觉如何?";
+				}
+			}
+		</script>
+		<hr>
+		
+		<div class="btn" >计时事件</div><div class="clear"> </div>
+		<script type="text/javascript">
+			// setInterval() - 间隔指定的毫秒数不停地执行指定的代码。
+			// setTimeout() - 在指定的毫秒数后执行指定代码。
+		</script>
+
+	</body>
+</html>
