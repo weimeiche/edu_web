@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="style.css" type="text/css" rel="stylesheet"/>
+		<script src="public.js" type="text/javascript"></script>
+		<style>
+			.hide{display: none;}
+		</style>
+	</head>
+	<body>
+		
+		<div class="top-box">
+			<div class="hr"></div>
+			<div class="word">赋值和取值</div>
+		</div>
+		
+		<div class="per100">
+			<div class="lf">输入框：</div>
+			<div class="rt">
+				<input type="text" id="username" class="ipt" placeholder="请输入标题" />
+			</div>
+		</div>
+		<div class="per100">
+			<div class="lf">密码框：</div>
+			<div class="rt">
+				<input type="password" id="password" class="ipt" placeholder="请输入密码" />
+			</div>
+		</div>
+		<div class="per100">
+			<div class="lf">选择框：</div>
+			<div class="rt">
+				<select class="sel" id="sel_cate">
+					<option class="option" value="">请选择</option>
+					<option class="option" value="write">写作</option>
+					<option class="option" value="read">阅读</option>
+				</select>
+			</div>
+		</div>
+		<div class="per100">
+			<div class="lf">复选框：</div>
+			<div class="rt">
+				<div class="marT10">
+					<div class="check-box" id="chk_write" onclick="checkChange(this)">
+						<div class="word">写作</div>
+						<span ><font class="correct"></font></span>
+						<input type="checkbox" checked="true" value="写作" />
+					</div>
+					<div class="check-box" id="chk_read" onclick="checkChange(this)">
+						<div class="word">阅读</div>
+						<span><font class="correct"></font></span>
+						<input type="checkbox" value="阅读" />
+					</div>
+					<div class="check-box" id="chk_daze" onclick="checkChange(this)">
+						<div class="word">发呆</div>
+						<span><font class="correct"></font></span>
+						<input type="checkbox" value="发呆" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="per100">
+			<div class="lf">开关：</div>
+			<div class="rt">
+				<div class="switch-box marT10" alt="">
+					<input type="checkbox" id="check_switch" value="1" />
+					<label for="check_switch">
+						<span></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="per100">
+			<div class="lf">单选框：</div>
+			<div class="rt">
+				<div class="radio-box marT10">
+					<input type="radio" name="sex" value="男" id="man" />
+					<label for="man">男
+						<span><font></font></span>
+					</label>
+				</div>
+				<div class="radio-box marT10">
+					<input type="radio" name="sex" value="女" id="woman" />
+					<label for="woman">女
+						<span><font></font></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="per100">
+			<div class="lf">文本域：</div>
+			<div class="rt">
+				<textarea class="textarea" id="textarea" placeholder="请输入内容"></textarea>
+			</div>
+		</div>
+		<div class="per100">
+			<div class="lf"></div>
+			<div class="rt">
+				<div onclick="initValue()" class="btn">赋值</div>
+				<div onclick="getValue()" class="btn">取值</div>
+				<div onclick="submit()" class="btn1">立即提交</div>
+			</div>
+		</div>
+		
+		<input type="text" id="asdfasdfasdfasdf" />
+		<script>
+var asdfasdfasdfasdf;
+			
+		</script>
+	</body>
+</html>

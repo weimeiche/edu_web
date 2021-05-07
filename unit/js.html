@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11</title>
+		<link rel="stylesheet" href="js.css" type="text/css" />
+	</head>
+	<body>
+		<style>
+			.box{width: 100%; height: 50px; position: relative; float: left;}
+			.hx{width: 100%; height: 1px; background: gray; position: absolute; top: 24px; left: 0; float: left;}
+			.wz{height: 50px; font-size: 18px; padding-left: 10px; padding-right: 10px; line-height: 50px;
+			position: absolute; left: 80px; top: 0; background-color: white;float: left;}
+		</style>
+		<div class="box">
+			<div class="hx"></div>
+			<div class="wz">赋值和取值</div>
+		</div>
+		
+		<div id="kuang">
+			<form>
+			输入框：<input type="text" name="" id="text" value="" class="text" placeholder="请输入标题"/><br><br><br>
+			密码框：<input type="password" name="" id="password" value="" class="text" placeholder="请输入密码"/><br><br><br>
+			选择框：<select name="" id="check">
+				<option value="1">请选择</option>
+				<option value="写作">写作</option>
+				<option value="阅读">阅读</option>
+				<option value="游戏">游戏</option>
+				<option value="音乐">音乐</option>
+				<option value="旅行">旅行</option> 
+			</select><br><br><br>
+			
+			<div id="checks">复选框：</div>
+			<style type="text/css">
+			    .check-box{height: 30px; line-height: 30px; cursor: pointer; margin-left:90px; margin-top:-25px;border: 1px solid #D2D2D2; border-radius: 5px; float: left;}
+				.check-box .word{ font-size: 16px; background-color: #D2D2D2; color: white; padding:0 10px; border-right: 1px solid #D2D2D2; float: left;}
+				.check-box span{ color: #FFFFFF; width: 30px; width: 30px; font-size: 20px; line-height: 30px; text-align: center; float: left;}
+				.check-box span font{ display: none;}
+				.check-box input{display: none;}
+				.check-box:hover .word{ background-color: #C2C2C2;}
+				.check-box:hover span font{display: block; color: #C2C2C2;}
+				
+				.checked-box .word, .checked-box:hover .word{ background-color: #5FB878; color: #FFFFFF;}
+				.checked-box span{ color: #5FB878; display: block;}
+				.checked-box span font,.checked-box:hover span font{ display: block; color: #5FB878;}
+			</style>
+			<div class="check-box" onclick="checkChange(this)">
+				<div class="word">写作</div>
+				<span><font>√</font></span>
+				<input type="checkbox" value="写作" />
+			</div>
+			<div class="check-box" onclick="checkChange(this)">
+				<div class="word">阅读</div>
+				<span><font>√</font></span>
+				<input type="checkbox" value="阅读" />
+			</div>
+			<div class="check-box" onclick="checkChange(this)">
+				<div class="word">发呆</div>
+				<span><font>√</font></span>
+				<input type="checkbox" value="发呆" />
+			</div>
+			<script>
+				function checkChange(obj){
+					// 获取选择框的选取状态并修改状态
+					var ipt = obj.getElementsByTagName("input")[0];
+					var check = ipt.checked; 
+					if(check){
+						ipt.checked = false;
+					}else{
+						ipt.checked = true;
+					}
+					// 修改样式
+					if(check){
+						obj.className = "check-box";
+					}else{
+						obj.className = "check-box checked-box";
+					}
+				}
+			</script><br /><br />
+			<div id="switch">开关：</div>
+			    <style>
+				.switch-box{width: 80px; height: 30px; border-radius: 20px; font-size: 14px;margin-left:90px;margin-top: -25px; position: relative; border:1px solid #D2D2D2; background-color: #FFFFFF; float: left;}
+				.switch-box input{opacity: 0; width: 80px; height: 30px; cursor: pointer;}
+				
+				.switch-box label{width: 80px; height: 30px; transition: all .5s ease; border-radius: 20px; position: absolute; background-color: #FFFFFF; cursor: pointer; border-radius: 15px; left: 0; top: 0; z-index: 1;}
+				.switch-box label::before{content: '';}
+				.switch-box label::after{content: 'Off'; color: #666666; position: absolute; left: 45px; top: 0; line-height: 30px;}
+				.switch-box label span{width: 20px; height: 20px; transition: all .5s ease; border-radius: 20px; background-color: #D2D2D2; position: absolute; left: 10px; top: 5px;}
+				
+				.switch-box input:checked+label{background-color: #5FB878; }
+				.switch-box input:checked+label::before{ content: "On"; color: #FFFFFF; position: absolute; left: 10px; top: 1px; line-height: 30px;}
+				.switch-box input:checked+label::after{ content: "";}
+				.switch-box input:checked+label span{ position: absolute; left: 50px; background-color: #FFFFFF;}
+			</style>
+			<div class="switch-box">
+				<input type="checkbox" id="check_switch" value="1" />
+				<label for="check_switch">
+					<span></span>
+				</label>
+			</div><br />
+			
+			<div id="sex">
+				单选框: 男<input type="radio"name="gender"value="男"checked="checked"/>
+				            女 <input type="radio"name="gender"value="女"checked="checked"/><br /><br /><br />
+			</div>  
+			<!-- 文本域： -->
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td style="text-align: right" >文本域：</td>
+					<td colspan="3">
+						<textarea id="textarea" name="introduce" style="border-radius: 7px;width: 360px;height: 70px;"></textarea>
+					</td>
+				</tr>
+			</table>
+			
+			<input onclick="fuzhi1(this)" type="button" name="button"  id="fuzhi" value="赋值" style="background-color: blue;color: white;border-color:blue;width: 70px;height: 40px; border-radius: 10px;"/>
+			&nbsp;&nbsp;
+			<input onclick="quzhi1(this)" type="button" name="botton" id="quzhi" value="取值" style="background-color: blue;color: white;border-color:blue;width: 70px;height: 40px; border-radius: 10px;"/>
+			&nbsp;&nbsp;
+			<input onclick="tijiao1(this)" type="submit" name="botton" id="tijiao" value="立即提交" style="background-color: green;color: white;border-color:blue;width: 70px;height: 40px; border-radius: 10px;"/>
+		
+		<script type="text/javascript">
+			function fuzhi1(){
+				var fuzhi = document.getElementsByTagName("fuzhi");
+				text.value="web好难";
+				password.value="666666";
+				check.value="旅行";
+				checks.value = "阅读";
+				sex.value = "女";
+				textarea.value="阿巴阿巴阿巴阿巴";
+			}
+		</script>
+		<script type="text/javascript">
+						function quzhi1(){
+						alert("输入框:"+text.value+",密码框:"+password.value+",选择框："+check.value+"，复选框："+checks.value+
+						"，性别："+sex.value+",文本框："+textarea.value)
+						}
+						
+						function tijiao1(node3){
+							document.getElementById("myForm").reset()
+							alert("usename:"+shuru.value+",Password:"+mima.value)
+							}
+		</script>
+			</form>
+		</div>
+	</body>
+</html>

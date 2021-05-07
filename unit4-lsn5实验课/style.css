@@ -1,0 +1,54 @@
+*{font-size:16px}
+.top-box{width:100%;height:50px;position:relative;float:left}
+.top-box .hr{width:100%;height:1px;background-color:#666666;margin-top:24px;float:left}
+.top-box .word{height:50px;line-height:50px;font-size:30px;
+padding-left:20px;padding-right:20px;background-color:white;
+position:absolute;top:0;left:50px}
+
+.marT10{ margin-top: 10px;}
+.per100{width:100%;display:flex;margin-top:20px;float:left}
+.per100 .lf{width:100px;line-height:50px;flex-shrink:0;font-size:16px;text-align:right;}
+.per100 .rt{flex-grow:1;display:flex;line-height: 50px; float:left}
+.ipt{flex-grow:1;height:40px;line-height:40px;margin-top:5px;border:1px solid lightblue;border-radius:5px;padding-left:10px;padding-right:10px}
+.sel{flex-grow:1;height:40px;line-height:40px;margin-top:5px;border:1px solid lightblue;border-radius:5px;padding-left:10px;padding-right:10px}
+.textarea{flex-grow:1; resize: none; height:100px;margin-top:5px;border:1px solid lightblue;border-radius:5px;padding:10px;}
+.btn,.btn1{width:120px;height:40px;cursor:pointer;border-radius:5px;line-height:40px;text-align:center;font-size:20px;background-color:#1DA0FF;color:white;margin-right:10px;}
+.btn1{background-color:#009587;}
+
+.check-box{background-color: white; height:30px;line-height:30px;cursor:pointer;margin-right:15px;border:1px solid #D2D2D2;border-radius:5px; float:left}
+.check-box .word{height: 30px; font-size:16px;background-color:#D2D2D2;color:white;padding:0 10px;border-right:1px solid #D2D2D2;float:left}
+.check-box span{color:#FFFFFF;width:30px;height:30px;font-size:20px;line-height:30px;text-align:center;float:left}
+.check-box span font{display:none; }
+.check-box input{display:none; }
+.check-box:hover .word{background-color:#C2C2C2}
+.check-box:hover span font{display:block;color:#C2C2C2}
+.checked-box .word,.checked-box:hover .word{background-color:#5FB878;color:#FFFFFF}
+.checked-box span,.checked-box:hover span{display:block}
+.checked-box span font,.checked-box:hover span font{display:block;color:#5FB878}
+.correct:before { content: '\2714'; }
+.incorrect:before { content: '\2716';}
+/* Font Awesome */
+/* https://blog.csdn.net/zx562602419/article/details/81020342 */
+/* https://fontawesome.com/ */
+
+.switch-box{width:80px;height:30px;border-radius:20px;font-size:14px;position:relative;border:1px solid #D2D2D2;background-color:#FFFFFF;float:left}
+.switch-box input{ display: none;}
+.switch-box label{width:80px;height:30px;transition:all .5s ease;
+position:absolute;background-color:#FFFFFF;cursor:pointer;
+border-radius:15px;left:0;top:0;z-index:1}
+.switch-box label::before{content:''}
+.switch-box label::after{content:'Off';color:#666666;position:absolute;left:45px;top:0;line-height:30px}
+.switch-box label span{width:20px;height:20px;transition:all .5s ease;border-radius:20px;background-color:#D2D2D2;position:absolute;left:10px;top:5px}
+.switch-box input:checked+label{background-color:#5FB878}
+.switch-box input:checked+label::before{content:"On";color:#FFFFFF;position:absolute;left:10px;top:1px;line-height:30px}
+.switch-box input:checked+label::after{content:""}
+.switch-box input:checked+label span{position:absolute;left:50px;background-color:#FFFFFF}
+
+.radio-box{ height: 30px; line-height: 30px; cursor: pointer; margin-right:20px; float: left;}
+.radio-box input{display: none;}
+.radio-box label{ color: black; cursor: pointer; font-size: 16px; padding-left: 40px; position: relative;}
+.radio-box span{ width: 20px; height: 20px; border-radius: 20px; border: 2px solid #C2C2C2; position: absolute; left: 5px; top: 0;}
+.radio-box font{ background-color: #000000000;}
+.radio-box input:checked+label{ color: #5FB878;}
+.radio-box input:checked+label span{ border: 2px solid #5FB878;}
+.radio-box input:checked+label font{width: 10px; height: 10px; background-color: #5FB878; border-radius: 10px; position: absolute; left: 5px; top: 5px;}
