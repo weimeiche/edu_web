@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../unit5-lsn1%20jQuery简介（一）/jquery-3.6.0.js"></script>
+		<style>
+			.btn{ height: 50px; padding: 0 15px; cursor: pointer; line-height: 50px; background-color: red; border-radius: 25px; margin: 10px; color: white; font-size: 18px; float: left;}
+			.btn:hover{background-color: #FF4040;}
+			hr, .clear{ clear: both; }
+			p{ overflow: hidden; height: 500px; background-color: lightgray; }
+			.fred{color: red;}
+			.fblue { color: blue;}
+			.div_lvl3{  border: 2px solid lightblue; padding: 10px; margin: 10px; }
+		</style>
+	</head>
+	<body>
+		<script>
+			function showOrHide(){
+				// var e = document.getElementById("p");
+				// e.className = "fblue";
+				// $(选择器).action();
+				// $("#p").addClass("fblue");
+				// $("#p").removeClass("fred");
+				// $("#p").toggleClass("fblue");
+				// console.log($("#p").css("color"));
+				// $("#p").css("color","#00ff00");
+				// $("#p").css({"color":"green","background-color":"red"});
+				
+				
+				/**
+				 * width：height本身的宽高
+				 * innerWidth：innerHeight 本身宽高+padding值
+				 * outerWidth：outerHeight 本身宽高+padding值+border值
+				 */
+				// <span id="span" style="width: 100px; height: 100px;
+				//  border: 50px solid green; 250
+				//  padding: 50px; background-color: blue; float: left;"></span>
+				// console.log("$(#span).width():"+$("#span").width());
+				// console.log("$(#span).height():"+$("#span").height());
+				
+				// console.log("$(#span).innerWidth():"+$("#span").innerWidth());
+				// console.log("$(#span).innerHeight():"+$("#span").innerHeight());
+				
+				// console.log("$(#span).outerWidth():"+$("#span").outerWidth());
+				// console.log("$(#span).outerHeight():"+$("#span").outerHeight());
+				
+				/**
+				 * parentsUntil 不含
+				 * parents 包含
+				 */
+				// $("#p").parent().css("border","2px solid red");
+				// $("#p").parents().css("border","2px solid red");
+				// $("#p").parents(".div_lvl3").css("border","5px solid red");
+				// $("#p").parentsUntil(".div_lvl3").css("border","10px solid red");
+				// console.log($("#p").parentsUntil(".div_lvl3").html());
+				// $("#p").parents(".div_lvl3").css("border","5px solid red");
+				// var asdf = $("#p").parents(".div_lvl3")
+				
+				
+				// $("#div_lvl2").children().css("border","5px solid red");
+				// $("#div_lvl2").find("p").css("color","blue");
+				
+				// siblings 不包括自己
+				// nextUntil 不包括until后面的选择器
+				// $("#div_lvl3").siblings().css("border","5px solid red");
+				// $("#div_lvl3").next().css("border","5px solid red");
+				// $("#div_lvl3").nextAll().css("border","5px solid red");
+				// $("#div_lvl3").nextUntil(".div_lvl4").css("border","5px solid red");
+				// $("#div_lvl3").prev().css("border","5px solid red");
+				
+				$.ajax({
+					type:'GET',
+					url: 'temp.txt',
+					dataType: 'json', // html, json
+					success: function(res){
+						console.log(res);
+						$("#div_lvl3").html(JSON.stringify(res));
+					},
+					error:function(err){
+						console.log("err"+err);
+					},
+					complete: function(res, status){
+						console.log(res);
+					}
+				});
+			}
+		</script>
+		
+		
+		<div onclick="showOrHide()" id="" class="btn" >隐藏段落</div>
+		<div id="showp" value="asdf" class="btn">显示段落</div>
+		<div class="clear"></div>
+		<div class="div_lvl3">div_lvl1
+				<div id="div_lvl2">div_lvl2
+					<div class="div_lvl3">0</div>
+					<div class="div_lvl3" style="">1</div>
+					<div class="div_lvl3" id="div_lvl3">2</div>
+					<div class="div_lvl3" >3</div>
+					<div class="div_lvl3">1111div_lvl3
+						<p id="p" class="fred" title="良辰美景奈何天" >
+							<span id="span" style="width: 100px; height: 100px;
+							 border: 50px solid green; 
+							 padding: 50px; background-color: blue; float: left;"></span>
+							【皂罗袍】
+							原来姹紫嫣红开遍，似这般都付与断井颓垣。良辰美景奈何天，赏心乐事谁家院！恁般景致，我老爷和奶奶再不提起。〔合〕朝飞暮卷，云霞翠轩；雨丝风片，烟波画船——锦屏人忒看的这韶光贱！〔贴〕是花都放了，那牡丹还早。
+							【好姐姐】
+							〔旦〕遍青山啼红了杜鹃，荼コ外烟丝醉软。春香啊，牡丹虽好，他春归怎占的先！〔贴〕成对儿莺燕啊。〔合〕闲凝眄，生生燕语明如翦，呖呖莺歌溜的圆。〔旦〕去罢。〔贴〕这园子委是观之不足也。〔旦〕提他怎的！〔行介〕
+							【隔尾】
+							观之不足由他缱，便赏遍了十二亭台是枉然。到不如兴尽回家闲过遣。〔作到介〕〔贴〕“开我西阁门，展我东阁床。瓶插映山紫，炉添沉水香。”小姐，你歇息片时，俺瞧老夫人去也。〔下〕〔旦叹介〕“默地游春转，小试宜春面。”春啊，得和你两留连，春去如何遣？咳，恁般天气，好困人也。春香那里？〔作左右瞧介〕〔又低首沉吟介〕天呵，春色恼人，信有之乎！常观诗词乐府，古之女子，因春感情，遇秋成恨，诚不谬矣。吾今年已二八，未逢折桂之夫；忽慕春情，怎得蟾宫之客？昔日韩夫人得遇于郎，张生偶逢崔氏，曾有《题红记》、《崔徽传》二书。此佳人才子，前以密约偷期，后皆得成秦晋。〔长叹介〕吾生于宦族，长在名门。年已及笄，不得早成佳配，诚为虚度青春，光阴如过隙耳。〔泪介〕可惜妾身颜色如花，岂料命如一叶乎！
+						</p>
+					</div>
+					<div class="div_lvl4">5</div>
+					<div class="div_lvl3">6</div>
+					<div class="div_lvl3">7</div>
+			</div>
+		</div>
+		<script>
+			
+				// var e = document.getElementById("p");
+				// e.className = "fblue";
+				// $("#p").removeClass("fred");
+				// $("#p").addClass("fblue");
+				// $("#p").toggleClass("fred");
+				// console.log($("#p").css("color"));
+				// console.log($("#p").css("color","#0000ff"));
+				// console.log($("#p").css({"color":"#00ff00","background-color":"#f00"}));
+				
+				
+				// $("#p").parent().css("border","2px solid red");
+				// $("#p").parents().css("border","2px solid blue");
+				// $("#p").parents("#div_lvl2").css("border","2px solid blue");
+				// console.log($("#p").html());
+				// console.log($("#p").outerHTML());
+				// console.log($("#p").parent("div").html());
+				// console.log($("#p").parent().find("#div_lvl1").html());
+				// console.log($("#p").parentsUntil("div").html());
+				
+				//
+				// var e = $("#div_lvl2").children();
+				// for (var i = 0; i < e.length; i++) {
+				// 	console.log($(e[i]).html());
+				// }
+				// console.logvar e = $("#div_lvl2").children()；.length);
+				
+				// console.log($("#div_lvl1").find("#span").html());
+				
+				
+				// var e = $("#div_lvl3").siblings();
+				
+				// for (var i = 0; i < e.length;) {
+				// 	// console.log("e.length==="+e.length);
+				// 	console.log($(e[i]).html());
+				// 	 i++;
+				// }
+				// console.log($("#div_lvl3").next().html());
+				// console.log($("#div_lvl3").nextAll().html());
+				// var e = $("#div_lvl3").nextAll();
+				
+				// until
+				// for (var i = 0; i < e.length;) {
+				// 	console.log($(e[i]).html());
+				// 	 i++;
+				// }
+				// console.log($("#div_lvl3").nextUntil(".div_lvl4").html());
+				// var e = $("#div_lvl3").nextUntil(".div_lvl4");
+				
+				// for (var i = 0; i < e.length;) {
+				// 	console.log($(e[i]).html());
+				// 	 i++;
+				// }
+				
+				// console.log("=====");
+				// console.log($("#div_lvl3").prev().html());
+				// console.log($("#div_lvl3").prevA().html());
+				// var e = $("#div_lvl3").prevAll();
+				
+				// for (var i = 0; i < e.length;) {
+				// 	// console.log("e.length==="+e.length);
+				// 	console.log($(e[i]).html());
+				// 	 i++;
+				// }
+				// $.ajax({
+				// 	url: 'temp1221.txt',
+				// 	data:{"ad":"asdf"},
+				// 	dataType:'json',
+				// 	type:'post',
+				// 	success: function(res){
+				// 		console.log("asasdf");
+				// 		$("#div_lvl3").html(res);
+				// 	},
+				// 	err
+				// 	complete:function(res){
+				// 		console.log("complete====");
+				// 	}
+				// });
+				// $("#div_lvl3").load("temp.txt",'',function(res){
+				// 	console.log(res);
+				// });
+		</script>
+	</body>
+</html>

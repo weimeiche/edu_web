@@ -53,6 +53,7 @@
 				// ps:只能获取表单的value值，不能获取非表单标签的value属性中的值
 				// textare 对应value并不是在标签上的value，而是标签中间的内容
 				// input type，select，textarea
+				// textarea <textarea value="">textarea的value值</textarea>
 				// var e = document.getElementById("p");
 				// console.log(e.innerText);
 				// console.log($("#ipt").val());
@@ -69,8 +70,8 @@
 				
 				
 				//  attr() 获取属性值
-				// 没有参数：获取属性值
-				// 有参数：赋值，将参数赋值选择的元素对象中去
+				// 没有第二个参数：获取属性值
+				// 有第二个参数：赋值，将参数赋值选择的元素对象中去
 				// ps：可以获取所有标签的所有属性（包括自定义属性），也可以对所有标签的所有属性进行赋值
 				// 		jquery以前版本不能表单checked进行赋值
 				// var e = document.getElementById("#p");
@@ -82,10 +83,10 @@
 				// $("#p").attr("title", "牡丹虽好，他春归怎占的先！");
 				// $("#p").attr("data-url", "牡丹虽好，他春归怎占的先！");
 				
-				
+				// checkbox  checked
 				//  prop() 获取表单属性值
-				// 没有参数：获取表单属性值
-				// 有参数：赋值，将参数赋值选择的元素对象中去
+				// 没有第二个参数：获取表单属性值
+				// 有第二个参数：赋值，将参数赋值选择的元素对象中去
 				// ps: 只能获取表单的预设属性，不能获取或设置自定义属性
 				// var e = document.getElementById("#p");
 				// console.log(e.ini);
@@ -98,20 +99,23 @@
 				// console.log($("#ipt").prop("url"));
 				
 				
-				// console.log($("p input:first").val());
-				// console.log($("p input").first().val());
+				// console.log($("#p input:first").val());
+				// nodelist
+				// console.log($("#p input").first().val());
 				
 				
 				// console.log($("p input:last").val());
 				// console.log($("p input").last().val());
 				
+				// var str = "原来姹紫嫣红开遍";
+				// console.log(str[1]);
+				// console.log("sdfsdf");
+				// console.log($("#p input:eq(3)").val());
+				// console.log($("p input").eq(3).val());
 				
-				// console.log($("p input:eq(2)").val());
-				// console.log($("p input").eq(2).val());
 				
-				
-				// console.log($("p input.fblue").val());
-				// console.log($("p input").filter(".fblue").val());
+				// console.log($("#p input.fblue").val());
+				// console.log($("#p input").filter(".fblue").val());
 				
 				// console.log(length);
 				// $("#p input[class!=fblue]").attr("class","fred");
@@ -139,9 +143,10 @@
 				// 添加内容可以是HTML标签
 				// apppend,prepend选择标签是闭合标签 img，input非闭合没有效果
 				// before、after对所有标签都是有效
-				// $("#p").apppend('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" onload=""/>');
+				// $("#p").append('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg"  />');
 				// $("#p").prepend('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" onload=""/>');
 				// $("#p").before('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" onload=""/>');
+				// $("#p").after('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" onload=""/>');
 				// $("#p").after('<input type="text" id="ipt" title="" class="fblue" value="jquery的val方法的测试" /><img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" onload=""/>');
 				
 				// $("#p").append('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" />');
@@ -149,12 +154,17 @@
 				// $("#p").before('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" />');
 				// $("#p").after('<img src="../unit3-lsn5%20css实战（实验课）/images/cart.jpg" />');
 				
-				
 				// $("#p .fblue").remove();
+				// $("#p").remove();
 				// $("#p").empty();
 				
 				// $("#city").empty()
-				// .append('<option>渝中</option><option>渝北区</option><option>江北</option>');
+				
+				// $("#city").empty().append('<option>渝中区</option><option>渝北区</option><option>江北区</option>');
+				
+				
+				// $(选择器).action();
+				// $("#p").slideUp().slideDown().slideToggle().slideToggle();
 				
 			}
 		</script>
@@ -162,7 +172,7 @@
 		<div onclick="showOrHide()" id="" class="btn" >隐藏段落</div>
 		<div id="showp" value="asdf" class="btn">显示段落</div>
 		<div class="clear"></div>
-		<input type="text" url="度娘" id="ipt" value="良辰美景奈何天" />
+		<input type="text" class="fblue" url="度娘" id="ipt" value="良辰美景奈何天" />
 		<input type="checkbox" id="chk" value="良辰美景奈何天" />
 		
 		<select id="region" onchange="showOrHide()">
